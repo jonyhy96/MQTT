@@ -1,0 +1,61 @@
+{
+  "properties": [
+    {
+      "name": "push.http.secret-key",
+      "type": "java.lang.String",
+      "description": "http 推送服务 所需 secret-key."
+    },
+    {
+      "name": "push.http.access-id",
+      "type": "java.lang.String",
+      "description": "http 推送服务 所需 access-id."
+    },
+    {
+      "name": "push.http.callback-url",
+      "type": "java.lang.String",
+      "description": "http 接收推送数据的接口 path.",
+      "defaultValue": "/data"
+    },
+    {
+      "name": "push.mqtt.username",
+      "type": "java.lang.String",
+      "description": "mqtt 认证用户名."
+    },
+    {
+      "name": "push.mqtt.password",
+      "type": "java.lang.String",
+      "description": "mqtt 认证密码."
+    },
+    {
+      "name": "push.mqtt.brokerUrl",
+      "type": "java.lang.String",
+      "description": "MQTT server URL."
+    },
+    {
+      "name": "push.mqtt.publisher",
+      "type": "java.lang.String",
+      "description": "Define if mqtt client should publish to mqtt topic."
+    },
+    {
+      "name": "push.mqtt.subscriber",
+      "type": "java.lang.String",
+      "description": "Description for push.mqtt.subscriber."
+    }
+  ],
+  "hints": [
+    {
+      "name": "push.http.callback-url",
+      "providers": [
+        {
+          "name": "any"
+        }
+      ],
+      "values": [
+        {
+          "value": "/data",
+          "description": "默认."
+        }
+      ]
+    }
+  ]
+}

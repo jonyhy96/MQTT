@@ -1,0 +1,20 @@
+server:
+  port: 8082
+push:
+  http:
+    callback-url: /data
+    access-id: "--"
+    secret-key: "--"
+  mqtt:
+    password: "password"
+    username: "admin"
+    brokerUrl: "tcp://192.168.34.32:61613"
+    subscriber: true
+    publisher: true
+spring:
+  kafka:
+    bootstrap-servers: "192.168.34.44:9094"
+    consumer:
+      group-id: defaultConsumerGroups
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
